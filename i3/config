@@ -21,7 +21,8 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 10
+#font pango:DejaVu Sans Mono 10
+font pango:Droid Sans Mono, Awesome 10
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -101,12 +102,12 @@ bindsym $mod+a focus parent
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1: "
 set $ws2 "2: "
-set $ws3 "3: "
+set $ws3 "3: "
 set $ws4 "4: "
 set $ws5 "5: "
 set $ws6 "6: "
 set $ws7 "7: "
-set $ws8 "8: "
+set $ws8 "8: "
 set $ws9 "9: "
 set $ws10 "10: "
 
@@ -177,7 +178,7 @@ bar {
 # Assign specific apps to preferred workspaces
 assign [class="Chromium"] $ws2
 assign [class="Eclipse"] $ws4
-assign [class="OpenRocket"] $ws7
+assign [class="net-sf-openrocket-startup-SwingStartup"] $ws7
 assign [class="Hexchat"] $ws9
 assign [class="Rhythmbox"] $ws10
 
@@ -202,3 +203,9 @@ bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+# Screenshot controls
+bindsym Print exec gnome-screenshot
+bindsym Control+Print exec gnome-screenshot --window
+bindsym Shift+Print exec gnome-screenshot --interactive
+
