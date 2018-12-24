@@ -30,6 +30,7 @@ Add entry to i3 config file:
 
 ## Multimedia Keys
 * need pactl or pamixer (pactl doesn't limit volume to 100%max / pamixer does)
+* also need playerctl installed
 * then cut/paste bindsyms:
 
 ```
