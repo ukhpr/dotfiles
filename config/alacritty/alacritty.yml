@@ -78,6 +78,9 @@ window:
   # Set this to `None` to use the default theme variant.
   gtk_theme_variant: None
 
+  dynamic_title: true
+
+
 scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
@@ -327,7 +330,7 @@ background_opacity: 1.0
   #save_to_clipboard: false
 
 # Allow terminal applications to change Alacritty's window title.
-dynamic_title: true
+#dynamic_title: true
 
 cursor:
   # Cursor style
@@ -644,8 +647,8 @@ key_bindings:
   - { key: Insert,   mods: Shift,                   action: PasteSelection   }
   - { key: Key0,     mods: Control,                 action: ResetFontSize    }
   - { key: Equals,   mods: Control,                 action: IncreaseFontSize }
-  - { key: Add,      mods: Control,                 action: IncreaseFontSize }
-  - { key: Subtract, mods: Control,                 action: DecreaseFontSize }
+  - { key: NumpadAdd,      mods: Control,                 action: IncreaseFontSize }
+  - { key: NumpadSubtract, mods: Control,                 action: DecreaseFontSize }
   - { key: Minus,    mods: Control,                 action: DecreaseFontSize }
 
   # (Windows only)
