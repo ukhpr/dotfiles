@@ -1,0 +1,14 @@
+[mediaplayer]
+command=~/.config/i3blocks/scripts/mediaplayer.sh
+interval=10
+signal=10
+color=#999999
+
+[volume]
+command=~/.config/i3blocks/scripts/volume.sh
+interval=once
+signal=10
+
+[clock]
+command=date '+%d-%m-%Y %H:%M'
+interval=10
