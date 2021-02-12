@@ -1,0 +1,3 @@
+auto-reload yes
+
+browser chromium %u
