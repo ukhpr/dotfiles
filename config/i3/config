@@ -184,13 +184,15 @@ bar {
 
 # Assign specific apps to preferred workspaces
 assign [class="Chromium"] $ws2
+assign [class="Brave-browser"] $ws2
 assign [class="Eclipse"] $ws4
-assign [class="code-oss"] $ws4
+assign [class="Code"] $ws4
+assign [class="jetbrains-idea-ce"] $ws4
 assign [class="net-sf-openrocket-startup-SwingStartup"] $ws7
 assign [class="Hexchat"] $ws9
 assign [class="Rhythmbox"] $ws10
 
-for_window [class="Gnome-calculator"] floating enable
+for_window [class="Mate-calc"] floating enable
 
 # Pulse Audio controls
 # Note: pamixer limits volumes to 0%..100%
