@@ -194,8 +194,10 @@ for_window [class="Gnome-calculator"] floating enable
 
 # Pulse Audio controls
 # Note: pamixer limits volumes to 0%..100%
-#       pamixer --list-sinks (to show audio devices)
-set $audiodev 0
+#set $audio_dev 0
+#set $audio_dev "alsa_output.pci-0000_00_1f.3.hdmi-stereo"
+set $audio_dev "alsa_output.pci-0000_00_1f.3.hdmi-stereo-extra1"
+
 #bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% #increase sound volume
 #bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5% #decrease sound volume
 #bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle # mute sound
@@ -211,11 +213,11 @@ bindsym XF86AudioMute exec --no-startup-id "pamixer --sink $audiodev --toggle-mu
 #bindsym XF86TouchpadToggle exec ~/.i3/toggletouchpad.sh # toggle touchpad
 
 # Player controls
-bindsym XF86AudioPlay exec "playerctl play-pause; pkill -SIGRTMIN+10 i3blocks"
+bindsym XF86AudioPlay exec playerctl play-pause
 #binddym XF86AudioPlay exec playerctl play
 #bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec "playerctl next; pkill -SIGRTMIN+10 i3blocks"
-bindsym XF86AudioPrev exec "playerctl previous; pkill -SIGRTMIN+10 i3blocks"
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 # Screenshot controls
 bindsym Print exec xfce4-screenshooter               # PrtScr = Interactive
