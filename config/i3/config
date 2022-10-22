@@ -218,7 +218,31 @@ bindsym XF86AudioNext exec "playerctl next; pkill -SIGRTMIN+10 i3blocks"
 bindsym XF86AudioPrev exec "playerctl previous; pkill -SIGRTMIN+10 i3blocks"
 
 # Screenshot controls
-bindsym Print exec gnome-screenshot
-bindsym Control+Print exec gnome-screenshot --window
-bindsym Shift+Print exec gnome-screenshot --interactive
+bindsym Print exec xfce4-screenshooter               # PrtScr = Interactive
+bindsym Ctrl+Print exec xfce4-screenshooter -d 3 -w  # Ctrl+PrtScr = Window with 3s delay
+bindsym Shift+Print exec xfce4-screenshooter -r      # Shift+PrtScr = Select Region
+bindsym Ctrl+Shift+Print exec xfce4-screenshooter -f # Ctrl+Shift+PrtScr = Full Screen
+
+# App keyboard shortcuts
+bindsym XF86Calculator exec mate-calc
+bindsym XF86Explorer exec alacritty
+bindsym XF86HomePage exec chromium
+bindsym XF86Tools exec deadbeef
+
+# set EnergyStar DPMS standby times
+#exec_always xset dpms 3000 5500 6000
+exec_always xset -dpms
+
+
+
+
+# Colourscheme - Gruvbox palette
+# class                 border  backgr. text    indicator child_border
+client.focused          #076678 #458588 #ebdbb2 #8ec07c   #076678
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #282828 #282828 #928374 #8ec07c   #282828
+client.urgent           #cc241d #fb4934 #ebdbb2 #fb4934   #cc241d
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
 
